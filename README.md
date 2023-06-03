@@ -91,6 +91,14 @@ Two
 Sync executed in 3.00 seconds.
 ```
 
+# pre-commit hooks
+
+Linting to be ran before committing
+
+- black
+- isort
+- flake8
+
 # Update pre-commit hooks
 
 If a hook is added to .pre-commit-config.yaml, update the .git/hooks files
