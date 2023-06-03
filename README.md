@@ -91,6 +91,8 @@ Two
 Sync executed in 3.00 seconds.
 ```
 
+</details>
+
 # pre-commit hooks
 
 Linting to be ran before committing
