@@ -27,5 +27,10 @@
   "python.formatting.blackArgs": ["--line-length", "79"],
   "python.linting.pydocstyleArgs": ["--convention=google"],
   "autoDocstring.docstringFormat": "google_docstring",
-  "autoDocstring.includeExtendedSummary": true
+  "autoDocstring.includeExtendedSummary": true,
+  "cSpell.words": [
+    "autodocstring",
+    "pyproject",
+    "pytest"
+  ]
 }

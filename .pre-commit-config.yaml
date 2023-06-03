@@ -5,4 +5,5 @@ repos:
       name: black
       entry: black
       language: python
+      files: ^.py$
       
