@@ -49,6 +49,7 @@ pip install -e .[dev]
 - async_http_test/
   - async_http_test.py - Examples for http async requests
   - counter_async.py - sleep examples of sync and async
+- Dockerfile - Settings to create a Docker image for the project
 - .vscode/settings.json - MS VSCode IDE workspace settings for linting, formatting, etc.
   tests/ - pytest unit tests
 - .gitignore - Files to not track by git
@@ -100,6 +101,7 @@ Linting to be ran before committing
 - black
 - isort
 - flake8
+- bandit
 
 # Update pre-commit hooks
 
@@ -108,3 +110,24 @@ If a hook is added to .pre-commit-config.yaml, update the .git/hooks files
 ```bash
 pre-commit install
 ```
+
+# Create Docker image
+Using the Dockerfile, a new Docker image can be created locally.
+This needs to be done in the project directory.
+
+Make sure project is up to date
+```sh
+git pull
+```
+
+Create image
+```sh
+docker build -t async_http_test .
+```
+
+Run image
+```sh
+docker run -it -d --name async_http_test async_http_test bash
+```
+
+For development, VSCode's "Dev Containers" extension can be used to remote into the container and open the project in the /app directory. The code can be ran normally in the container.
