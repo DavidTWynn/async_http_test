@@ -154,7 +154,7 @@ docker exec -it async_http_test bash
 
 Run 'exit' from shell when done.
 
-For development, VSCode's "Dev Containers" extension can be used to remote into the container and open the project in the /app directory. The code can be ran normally in the container.
+For development, VSCode's "Dev Containers" extension can be used to remote into the container and open the project in the /app directory. The code can be ran normally in the container. When VSCode is connected to the container, the VSCode extensions will then need to be installed for development.
 
 ## Clean up Docker
 
