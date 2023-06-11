@@ -17,4 +17,5 @@ dev = [
     "pydocstyle",
     "pytest",
     "pre-commit",
+    "bandit"
 ]
