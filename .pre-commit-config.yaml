@@ -20,4 +20,11 @@ repos:
       entry: flake8
       language: python
       files: .py$
+  - repo: local
+    hooks:
+    - id: bandit
+      name: bandit
+      entry: bandit
+      language: python
+      files: .py$
       
