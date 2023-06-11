@@ -112,22 +112,82 @@ pre-commit install
 ```
 
 # Create Docker image
+
 Using the Dockerfile, a new Docker image can be created locally.
 This needs to be done in the project directory.
 
 Make sure project is up to date
+
 ```sh
 git pull
 ```
 
 Create image
+
 ```sh
 docker build -t async_http_test .
 ```
 
-Run image
+Verify image
+
 ```sh
-docker run -it -d --name async_http_test async_http_test bash
+docker image ls
 ```
 
+Run image
+
+```sh
+docker run -it -d --name async_http_test async_http_test
+```
+
+Verify running container
+
+```sh
+docker container ls -a
+```
+
+Enter container
+
+```sh
+docker exec -it async_http_test bash
+```
+
+Run 'exit' from shell when done.
+
 For development, VSCode's "Dev Containers" extension can be used to remote into the container and open the project in the /app directory. The code can be ran normally in the container.
+
+## Clean up Docker
+
+When development work is done with Docker, the container can be stopped and the image can be deleted.
+
+Find container name
+
+```sh
+docker container ls
+```
+
+Name should be under NAMES column for "async_http_test" using that IMAGE
+
+Stop the container
+
+```sh
+docker container stop async_http_test
+```
+
+Delete the container (Needs to be stopped first)
+
+```sh
+docker container rm async_http_test
+```
+
+Locate the image (should be 'async_http_test')
+
+```sh
+docker image ls
+```
+
+Delete the image
+
+```sh
+docker image rm async_http_test
+```
