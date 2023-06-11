@@ -5,4 +5,4 @@ WORKDIR /app
 COPY . .
 
 RUN pip3 install --no-cache-dir --upgrade pip
-RUN pip3 install --no-cache-dir -e . 
+RUN pip3 install --no-cache-dir -e .[dev]
