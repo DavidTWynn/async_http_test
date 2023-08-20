@@ -26,8 +26,7 @@
   "python.formatting.provider": "none",
   "python.formatting.blackArgs": ["--line-length", "79"],
   "python.linting.pydocstyleArgs": ["--convention=google"],
-  "autoDocstring.docstringFormat": "google_docstring",
-  "autoDocstring.includeExtendedSummary": true,
+  "autoDocstring.docstringFormat": "google_docstring.mustache",
   "cSpell.words": [
     "autodocstring",
     "pyproject",
