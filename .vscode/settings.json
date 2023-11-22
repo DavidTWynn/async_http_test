@@ -1,31 +1,11 @@
 {
   /* VSCode */
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
   /* Python */
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnType": true
   },
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.pydocstyleEnabled": false,
-  "python.analysis.typeCheckingMode": "basic",
-  "python.linting.pylintEnabled": true,
-  "python.linting.banditEnabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.mypyArgs": [
-    "--basic",
-    "--strict-optional",
-    "--follow-imports=skip",
-    "--ignore-missing-imports"
-  ],
-  "isort.args": ["--profile", "black"],
-  "python.formatting.provider": "none",
-  "python.formatting.blackArgs": ["--line-length", "79"],
-  "python.linting.pydocstyleArgs": ["--convention=google"],
   "autoDocstring.docstringFormat": "google_docstring.mustache",
   "cSpell.words": [
     "autodocstring",
