@@ -4,7 +4,7 @@ RUN groupadd app && useradd -m -g app app
 RUN chsh -s /bin/bash app
 RUN chsh -s /usr/sbin/nologin root
 
-USER $SERVICE_NAME
+USER app
 
 WORKDIR /app
 
