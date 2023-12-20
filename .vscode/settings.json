@@ -1,15 +1,20 @@
 {
   /* VSCode */
   "editor.formatOnSave": true,
-  /* Python */
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnType": true
-  },
-  "autoDocstring.docstringFormat": "google_docstring.mustache",
   "cSpell.words": [
     "autodocstring",
     "pyproject",
     "pytest"
-  ]
+  ],
+  /* Python */
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnType": true
+  },
+  "autoDocstring.docstringFormat": "google_docstring.mustache",
+  /* Python - Mypy */
+  "mypy-type-checker.args": [
+    "--config-file=pyproject.toml"
+  ],
+  "mypy-type-checker.importStrategy": "fromEnvironment"
 }

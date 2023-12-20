@@ -23,8 +23,9 @@ def get_data():
     rich.print(response.json())
 
 
-def main() -> None:
+def main() -> str:
     get_data()
+    return 1
 
 
 if __name__ == "__main__":

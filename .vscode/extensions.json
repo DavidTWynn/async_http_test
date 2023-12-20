@@ -1,4 +1,5 @@
 {
-"recommendations": [
-]
+    "recommendations": [
+        "ms-azuretools.vscode-docker"
+    ]
 }
