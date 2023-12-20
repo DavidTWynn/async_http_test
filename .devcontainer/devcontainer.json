@@ -14,11 +14,11 @@
 				"ms-azuretools.vscode-docker",
 				"streetsidesoftware.code-spell-checker",
 				"njpwerner.autodocstring",
-				"charliermarsh.ruff",
-				"ms-python.mypy-type-checker",
 				"gurumukhi.selected-lines-count",
 				"lucasTonetto.performance-metrics",
 				"tamasfe.even-better-toml",
+				"charliermarsh.ruff",
+				"ms-python.mypy-type-checker",
 				"ms-python.pylint"
 			]
 		}
