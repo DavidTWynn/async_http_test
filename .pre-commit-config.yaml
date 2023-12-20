@@ -1,31 +1,23 @@
 repos:
   - repo: local
     hooks:
-    - id: black
-      name: black
-      entry: black
+    - id: ruff
+      name: ruff
+      entry: ruff
       language: python
       files: .py$
-      args: ['--line-length', '79']
+      args: ['--fix']
   - repo: local
     hooks:
-    - id: isort
-      name: isort
-      entry: isort
-      language: python
-      files: .py$
-  - repo: local
-    hooks:
-    - id: flake8
-      name: flake8
-      entry: flake8
+    - id: mypy
+      name: mypy
+      entry: mypy
       language: python
       files: .py$
   - repo: local
     hooks:
-    - id: bandit
-      name: bandit
-      entry: bandit
+    - id: pylint
+      name: pylint
+      entry: pylint
       language: python
       files: .py$
-      

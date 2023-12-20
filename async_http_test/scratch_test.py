@@ -1,3 +1,4 @@
+"""Test."""
 import httpx
 import rich
 
@@ -18,8 +19,22 @@ class Example:
         """
         self.a = a
 
-    def print(self):
+    def print(self) -> None:
+        """_summary_.
+
+        _extended_summary_
+        """
         print(self.a)
+
+    def lint_test(self) -> int:
+        """_summary_.
+
+        _extended_summary_
+
+        Returns:
+            _description_
+        """
+        return 1
 
 
 def get_data() -> None:
@@ -47,7 +62,14 @@ def get_data() -> None:
     rich.print(response.json())
 
 
-def main() -> str:
+def main() -> int:
+    """_summary_.
+
+    _extended_summary_
+
+    Returns:
+        _description_
+    """
     get_data()
 
     return 1

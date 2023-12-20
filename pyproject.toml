@@ -37,3 +37,11 @@ convention = "google"
 
 [tool.mypy]
 strict = true
+
+[tool.pylint]
+disable = [
+    # Ignore missing docstring because ruff will get it with D103
+    "C0116",
+    # Ignore missing top of file docstring because ruff will get it with D100
+    "C0114",
+]
