@@ -20,7 +20,8 @@
 				"ms-python.mypy-type-checker",
 				"gurumukhi.selected-lines-count",
 				"lucasTonetto.performance-metrics",
-				"tamasfe.even-better-toml"
+				"tamasfe.even-better-toml",
+				"ms-python.pylint"
 			]
 		}
 	}

@@ -2,7 +2,31 @@ import httpx
 import rich
 
 
-def get_data():
+class Example:
+    """HI.
+
+    _extended_summary_
+    """
+
+    def __init__(self, a: int):
+        """Test.
+
+        _extended_summary_
+
+        Args:
+            a: info
+        """
+        self.a = a
+
+    def print(self):
+        print(self.a)
+
+
+def get_data() -> None:
+    """_summary_.
+
+    _extended_summary_
+    """
     base_url = (
         "https://api.fiscaldata.treasury.gov",
         "/services/api/fiscal_service",
@@ -25,6 +49,7 @@ def get_data():
 
 def main() -> str:
     get_data()
+
     return 1
 
 

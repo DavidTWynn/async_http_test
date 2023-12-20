@@ -1,6 +1,5 @@
 {
   /* VSCode */
-  "editor.formatOnSave": true,
   "cSpell.words": [
     "autodocstring",
     "pyproject",
@@ -9,12 +8,22 @@
   /* Python */
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnType": true
+    "editor.formatOnSave": true,
   },
-  "autoDocstring.docstringFormat": "google_docstring.mustache",
+  "autoDocstring.customTemplatePath": "google_docstring.mustache",
   /* Python - Mypy */
   "mypy-type-checker.args": [
     "--config-file=pyproject.toml"
   ],
-  "mypy-type-checker.importStrategy": "fromEnvironment"
+  "mypy-type-checker.importStrategy": "fromEnvironment",
+  /* Python - Pylint */
+  "pylint.args": [
+    "--rcfile=pyproject.toml"
+  ],
+  "pylint.importStrategy": "fromEnvironment",
+  /* Python - Ruff */
+  "ruff.importStrategy": "fromEnvironment",
+  "ruff.lint.args": [
+    "--config=pyproject.toml"
+  ]
 }
