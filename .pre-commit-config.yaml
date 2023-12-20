@@ -6,7 +6,14 @@ repos:
       entry: ruff
       language: python
       files: .py$
-      args: ['--fix']
+      args: [
+        # Fixes errors with black
+        '--fix',
+        '--ignore',
+        # Allow missing docstrings
+        'D103',
+        'D100'
+        ]
   - repo: local
     hooks:
     - id: mypy
@@ -14,6 +21,8 @@ repos:
       entry: mypy
       language: python
       files: .py$
+      # Use no config file so it can run not in strict, but VSCode will show strict
+      args: ['--config-file=']
   - repo: local
     hooks:
     - id: pylint

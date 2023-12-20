@@ -1,3 +1,4 @@
+"""Example."""
 import asyncio
 import time
 
