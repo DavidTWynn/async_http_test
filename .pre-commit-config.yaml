@@ -9,8 +9,8 @@ repos:
       args: [
         # Fixes errors with black
         '--fix',
-        '--ignore',
         # Allow missing docstrings
+        '--ignore',
         'D103',
         'D100'
         ]
