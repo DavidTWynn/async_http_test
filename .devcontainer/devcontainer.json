@@ -2,11 +2,11 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
 {
 	"name": "async_http_test",
-	"build": {
-		"context": "..",
-		"dockerfile": "../Dockerfile"
-	},
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "async_http_test",
+	"workspaceFolder": "/async_http_test_container/",
 	"containerUser": "app",
+	"remoteUser": "app",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -23,6 +23,8 @@
 			]
 		}
 	},
+	// Needed to fix git permissions
+	"postCreateCommand": "git config --global --add safe.directory /async_http_test_container",
 	// Need to install pre-commit when first git pulled
 	"postStartCommand": "pre-commit install"
 }

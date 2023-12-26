@@ -1,0 +1,7 @@
+services:
+  async_http_test:
+    user: app
+    build: .
+    volumes:
+      - .:/async_http_test_container:cached
+    command: sleep infinity
