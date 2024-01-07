@@ -44,6 +44,14 @@ Optional: Install dev dependencies to contribute
 pip install -e .[dev]
 ```
 
+# Settings
+The postgres database is setup with Docker compose. The postgres settings are configured with Docker secrets. These files will need to be created with the value stored for the setting. Create them at the top of the project level.
+
+- postgres_db.txt
+- postgres_password.txt
+- postgres-user.txt
+
+
 # Files
 
 - async_http_test/

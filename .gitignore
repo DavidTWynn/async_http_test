@@ -1,2 +1,5 @@
 __pycache__
 venv
+postgres_user.txt
+postgres_password.txt
+postgres_db.txt

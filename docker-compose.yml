@@ -6,18 +6,29 @@ services:
       - .:/async_http_test_container:cached
     command: sleep infinity
   db:
+    secrets:
+      - postgres_user
+      - postgres_password
+      - postgres_db
     image: postgres:latest
     restart: unless-stopped
     volumes:
       - postgres-data:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_DB: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER_FILE: /run/secrets/postgres_user
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+      POSTGRES_DB_FILE: /run/secrets/postgres_db
     ports:
       - 5432:5432
-    # Add "forwardPorts": ["5432"] to **devcontainer.json** to forward PostgreSQL locally.
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
 
 volumes:
   postgres-data:
+
+
+secrets:
+  postgres_user:
+    file: postgres_user.txt
+  postgres_password:
+    file: postgres_password.txt
+  postgres_db:
+    file: postgres_db.txt

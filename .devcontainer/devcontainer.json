@@ -26,9 +26,5 @@
 	// Needed to fix git permissions
 	"postCreateCommand": "git config --global --add safe.directory /async_http_test_container",
 	// Need to install pre-commit when first git pulled
-	"postStartCommand": "pre-commit install",
-	// Forward port for postgres container
-	"forwardPorts": [
-		5432
-	]
+	"postStartCommand": "pre-commit install"
 }
