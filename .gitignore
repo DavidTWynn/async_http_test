@@ -3,3 +3,5 @@ venv
 postgres_user.txt
 postgres_password.txt
 postgres_db.txt
+grafana_user.txt
+grafana_password.txt
