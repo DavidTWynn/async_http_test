@@ -3,7 +3,7 @@ services:
     user: app
     build: .
     volumes:
-      - .:/async_http_test_container:cached
+      - .:/async_http_test_container
     command: sleep infinity
   db:
     secrets:
