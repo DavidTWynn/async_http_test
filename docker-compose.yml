@@ -4,8 +4,10 @@ services:
     build: .
     volumes:
       - .:/async_http_test_container
-    command: sleep infinity
-  db:
+    depends_on:
+      - postgres
+      - prometheus
+  postgres:
     secrets:
       - postgres_user
       - postgres_password
@@ -45,10 +47,14 @@ services:
     secrets:
       - grafana_user
       - grafana_password
+    depends_on:
+      - prometheus
+      - postgres
 
 volumes:
   postgres-data:
   prometheus_data:
+
 
 secrets:
   postgres_user:
